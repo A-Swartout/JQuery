@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<script>
+var i = 0;
+$(document).ready(function() {
+    $("html").append(
+        "<body>\
+            <div id='container'>\
+                <div id='inner'>\
+                    <h1>Basic jQuery</h1>\
+                    <p id='1'>Paragraph 1</p>\
+                    <p id='2'>Paragraph 2</p>\
+                    <p id='3'>Paragraph 3</p>\
+                </div>\
+            </div>\
+        </body>"
+    );
+    $("#2").css({"color":"red"});
+    $("#3").on("click", function() {
+        $("h1").fadeOut(1000);
+        console.log("you made the h1 run away!");
+        i = 1
+    });
+    $("#1").on("click", function() {
+        if (i === 1) {
+            $("h1").fadeIn(3000);
+        console.log("dont worry, he is back again.");
+        }
+    });
+});
+</script>
+</html>
